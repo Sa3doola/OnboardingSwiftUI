@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentTab = 0
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        TabView(selection: $currentTab,
+                content:  {
+            ForEach(OnboardingData.list) { viewData in
+                OnboardingView(data: viewData)
+                    .tag(viewData.id)
+            }
+        })
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(.page)
+        .background(Color(.white))
+    
     }
 }
 

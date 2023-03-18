@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D920FD3229C64F860063AEC7 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920FD3129C64F860063AEC7 /* SplashScreen.swift */; };
 		D9F105AC29C643D0009E913C /* OboardingSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F105AB29C643D0009E913C /* OboardingSwiftUIApp.swift */; };
 		D9F105AE29C643D0009E913C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F105AD29C643D0009E913C /* ContentView.swift */; };
 		D9F105B029C643D2009E913C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F105AF29C643D2009E913C /* Assets.xcassets */; };
 		D9F105B329C643D2009E913C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F105B229C643D2009E913C /* Preview Assets.xcassets */; };
+		D9F105BA29C64566009E913C /* OboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F105B929C64566009E913C /* OboardingModel.swift */; };
+		D9F105BC29C645FB009E913C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F105BB29C645FB009E913C /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D920FD3129C64F860063AEC7 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		D9F105A829C643D0009E913C /* OboardingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OboardingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F105AB29C643D0009E913C /* OboardingSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OboardingSwiftUIApp.swift; sourceTree = "<group>"; };
 		D9F105AD29C643D0009E913C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9F105AF29C643D2009E913C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F105B229C643D2009E913C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9F105B929C64566009E913C /* OboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OboardingModel.swift; sourceTree = "<group>"; };
+		D9F105BB29C645FB009E913C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				D9F105AB29C643D0009E913C /* OboardingSwiftUIApp.swift */,
+				D9F105BB29C645FB009E913C /* OnboardingView.swift */,
+				D9F105B929C64566009E913C /* OboardingModel.swift */,
+				D920FD3129C64F860063AEC7 /* SplashScreen.swift */,
 				D9F105AD29C643D0009E913C /* ContentView.swift */,
 				D9F105AF29C643D2009E913C /* Assets.xcassets */,
 				D9F105B129C643D2009E913C /* Preview Content */,
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D920FD3229C64F860063AEC7 /* SplashScreen.swift in Sources */,
 				D9F105AE29C643D0009E913C /* ContentView.swift in Sources */,
+				D9F105BC29C645FB009E913C /* OnboardingView.swift in Sources */,
+				D9F105BA29C64566009E913C /* OboardingModel.swift in Sources */,
 				D9F105AC29C643D0009E913C /* OboardingSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +285,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +295,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sa3doola.OboardingSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +318,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +328,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sa3doola.OboardingSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
